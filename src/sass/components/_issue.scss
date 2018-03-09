@@ -95,7 +95,7 @@
         margin: 0 (-$issue-padding) (-$issue-padding);
         padding: $padding-wiki;
         border-top: 1px solid $issue-border;
-        background: $body-bg;
+        background: $issue-bg;
       }
     }
 
@@ -412,7 +412,7 @@ div.thumbnails {
     margin: 0;
     padding: $bubble-padding-vertical $bubble-padding-horizontal;
     border-radius: $panel-border-radius $panel-border-radius 0 0;
-    background-color: $issue-bg;
+    background-color: $panel-bg;
     color: $gray;
     font-size: $font-size-list;
 

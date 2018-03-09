@@ -8,14 +8,15 @@
 
 $fixed-layout:                  false !default;
 $flexbox-layout:                true !default;
-$sidebar-position:              left !default;
+$sidebar-position:              right !default;
 $color-priorities:              true !default;
-$color-trackers:                true !default;
-$colored-issue:                 true !default;
+$color-trackers:                false !default;
+$colored-issue:                 false !default;
 $color-status:                  true !default;
-$use-gravatars:                 true !default;
+$color-overdues:                true !default;
+$use-gravatars:                 false !default;
 $use-font-awesome:              true !default;
-$use-logo:                      false !default;
+$use-logo:                      true !default;
 $use-retina-logo:               false !default;
 $use-project-tiles:             true !default;
 $issue-subject-large:           true !default;
@@ -27,7 +28,7 @@ $top-menu-collapse:             false !default;
 //== Colors
 //
 
-$gray-base:                     #808080 !default;
+$gray-base:                     #607D8B !default;
 $gray-darkest:                  darken($gray-base, 40%) !default;
 $gray-darker:                   darken($gray-base, 33%) !default;
 $gray-dark:                     darken($gray-base, 17%) !default;
@@ -36,11 +37,11 @@ $gray-light:                    lighten($gray-base, 17%) !default;
 $gray-lighter:                  lighten($gray-base, 35%) !default;
 $gray-lightest:                 lighten($gray-base, 46%) !default;
 
-$brand-primary:                 #584492 !default;
+$brand-primary:                 #0052CC !default;
 $brand-text:                    #fff !default;
 $brand-accent:                  #deddef !default;
 
-$brand-success:                 #019851 !default;
+$brand-success:                 #00897B !default;
 $brand-info:                    #409ae3 !default;
 $brand-warning:                 #ed820c !default;
 $brand-danger:                  #e74c3c !default;
@@ -57,7 +58,7 @@ $state-danger:                  #f7a6a4 !default;
 $body-bg:                       #fff !default;
 $text-color:                    $gray-dark !default;
 
-$link-color:                    #4183c4 !default;
+$link-color:                    #0057D8 !default;
 $link-hover-color:              darken($link-color, 10%) !default;
 $link-hover-decoration:         underline !default;
 $link-closed-decoration:        line-through !default;
@@ -68,15 +69,15 @@ $link-color-user-locked:        $gray !default;
 
 //== Typography
 //
-
-$font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, freesans, sans-serif !default;
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+// $font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, freesans, sans-serif !default;
+$font-family-sans-serif:        -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !default; 
 $font-family-monospace:         Consolas, "Liberation Mono", Menlo, "Courier New", Courier, monospace !default;
 $font-family-base:              $font-family-sans-serif !default;
 $font-weight-normal:            normal !default;
 $font-weight-bold:              bold !default;
 
-$font-size-base:                14px !default;
+$font-size-base:                16px !default;
 $font-size-large:               1.285em !default;
 $font-size-large-px:            18px !default;
 $font-size-small-unitless:      .86 !default;
@@ -86,7 +87,7 @@ $font-size-small-px:            floor($font-size-small-unitless * $font-size-bas
 $font-size-h1:                  2.25em !default;
 $font-size-h2:                  1.75em !default;
 $font-size-h3:                  1.5em !default;
-$font-size-h4:                  1.286em !default;
+$font-size-h4:                  1.2em !default;
 $font-size-h5:                  1em !default;
 $font-size-h6:                  1em !default;
 
@@ -141,7 +142,7 @@ $component-active-color:        $brand-text !default;
 $component-active-bg:           $brand-primary !default;
 $component-active-border:       $brand-primary !default;
 
-$font-size-list:                .92em !default;
+$font-size-list:                1em !default;
 
 $collapsible-animation-time:    .3s !default;
 
@@ -156,7 +157,7 @@ $table-list-header-border:      0 0 2px !default;
 $table-list-item-border:        0 0 1px !default;
 $table-list-color-odd-rows:     true !default;
 $table-list-color-even-rows:    false !default;
-$table-list-highlight-rows:     false !default;
+$table-list-highlight-rows:     true !default;
 
 $table-bg:                      transparent !default;
 $table-accent-factor:           .03 !default;
@@ -166,6 +167,14 @@ $table-bg-hover:                rgba(#000, $table-hover-factor) !default;
 $table-bg-active:               $table-bg-hover !default;
 
 $table-border-color:            darken($body-bg, 13.5%) !default;
+
+
+//== Overdue
+//
+
+$overdue-bg:                    #FFF8E1 !default;
+$overdue-text:                  #676 !default;
+$overdue-link:                  #E65100 !default;
 
 
 //== Trackers priorities
@@ -251,9 +260,9 @@ $diff-in-bg-light:              rgba($diff-in-bg, .3) !default;
 //
 
 $journal-old-value-color:       #430 !default;
-$journal-old-value-bg:          rgba(#ffeaaa, .3) !default;
+$journal-old-value-bg:          rgba(#ffeaaa, .5) !default;
 $journal-new-value-color:       #350 !default;
-$journal-new-value-bg:          rgba(#bffbbf, .3) !default;
+$journal-new-value-bg:          rgba(#bffbbf, .5) !default;
 
 
 //== Changesets
@@ -373,7 +382,7 @@ $logo-position-horizontal:      $header-padding-vertical !default;
 $logo-position-vertical:        center !default;
 $logo-space:                    floor($header-padding-vertical / 2) !default;
 
-$main-menu-bg:                  $gray-lightest !default;
+$main-menu-bg:                  #f9f9f9 !default;
 $main-menu-bg-hover:            $gray-lightest !default;
 $main-menu-link:                $gray-darker !default;
 $main-menu-link-active:         #000 !default;
@@ -492,7 +501,7 @@ $tooltip-link:                  $link-color !default;
 //== Issue
 //
 
-$issue-bg:                      #f9f9f9 !default;
+$issue-bg:                      #FFFDE7 !default;
 $issue-border:                  #ccc !default;
 $issue-text:                    $text-color !default;
 

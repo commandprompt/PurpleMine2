@@ -21,6 +21,9 @@
   } @else {
     overflow: hidden;
   }
+   > h2 {
+    color: $brand-danger;
+  }
 }
 
 

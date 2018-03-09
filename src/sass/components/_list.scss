@@ -22,6 +22,7 @@ table.list {
     border-width: $table-list-header-border;
     color: $gray;
     vertical-align: bottom;
+    // text-align: left;
 
     a {
       color: $gray-darker;
@@ -322,6 +323,16 @@ tr.entry {
   @include priority(".priority-high3",   $priority-high3-bg,   $priority-high3-text,   $priority-high3-link);
   @include priority(".priority-high2",   $priority-high2-bg,   $priority-high2-text,   $priority-high2-link);
   @include priority(".priority-highest", $priority-highest-bg, $priority-highest-text, $priority-highest-link);
+}
+
+@if $color-overdues {
+  // tr.issue.overdue {
+  //   background: $overdue-bg;
+  //   &:hover {
+  //     background-color: red;
+  //   }
+  // }
+  @include priority(".overdue", $overdue-bg, $overdue-text, $overdue-link);
 }
 
 @if $color-trackers {

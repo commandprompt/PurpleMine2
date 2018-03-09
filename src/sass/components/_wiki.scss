@@ -222,9 +222,12 @@ div.wiki {
   }
 
   .toc {
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    display: table;
+    padding: 15px;
     margin-bottom: $line-height-computed;
     margin-left: 0;
-    padding: 0;
     list-style-type: none;
 
     &.right,
@@ -274,17 +277,21 @@ div.wiki {
     li {
       // scss-lint:disable SelectorDepth
       margin: 0;
+      font-size: 1.2em;
+      list-style-type: none;
 
       li {
         margin-left: 1.5em;
-        list-style-type: disc;
+        font-size: 1em;
+        // list-style-type: disc;
 
         li {
-          list-style-type: circle;
+          font-size: 0.9em;
+        //   list-style-type: circle;
 
-          li {
-            list-style-type: square;
-          }
+        //   li {
+        //     list-style-type: square;
+        //   }
         }
       }
     }
