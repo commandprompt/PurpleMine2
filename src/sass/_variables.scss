@@ -58,7 +58,7 @@ $state-danger:                  #f7a6a4 !default;
 $body-bg:                       #fff !default;
 $text-color:                    $gray-dark !default;
 
-$link-color:                    #0057D8 !default;
+$link-color:                    #01579B !default;
 $link-hover-color:              darken($link-color, 10%) !default;
 $link-hover-decoration:         underline !default;
 $link-closed-decoration:        line-through !default;
@@ -77,7 +77,7 @@ $font-family-base:              $font-family-sans-serif !default;
 $font-weight-normal:            normal !default;
 $font-weight-bold:              bold !default;
 
-$font-size-base:                16px !default;
+$font-size-base:                15px !default;
 $font-size-large:               1.285em !default;
 $font-size-large-px:            18px !default;
 $font-size-small-unitless:      .86 !default;
@@ -186,7 +186,7 @@ $priority-lowest-link:          #096 !default;
 
 $priority-default-bg:           #fff !default;
 $priority-default-text:         $text-color !default;
-$priority-default-link:         $link-color !default;
+$priority-default-link:         #01579B !default;
 
 $priority-high3-bg:             #d5eaff !default;
 $priority-high3-text:           #556 !default;
