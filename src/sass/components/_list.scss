@@ -91,6 +91,8 @@ table.list {
     &.string,
     &.subject,
     &.updated_on,
+    &.created_on,
+    &.due_date,
     &.project,
     &.tracker,
     &.user {
