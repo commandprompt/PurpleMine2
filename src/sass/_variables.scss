@@ -9,11 +9,13 @@
 $fixed-layout:                  false !default;
 $flexbox-layout:                true !default;
 $sidebar-position:              right !default;
-$color-priorities:              true !default;
+$color-priorities:              false !default;
 $color-trackers:                false !default;
 $colored-issue:                 false !default;
 $color-status:                  true !default;
-$color-overdues:                true !default;
+$color-overdues:                false !default;
+$issue-priority-markers:        true !default;
+$issue-overdue-markers:         true !default;
 $use-gravatars:                 false !default;
 $use-font-awesome:              true !default;
 $use-logo:                      true !default;
@@ -163,7 +165,7 @@ $table-bg:                      transparent !default;
 $table-accent-factor:           .03 !default;
 $table-hover-factor:            .03 !default;
 $table-bg-accent:               rgba(#000, $table-accent-factor) !default;
-$table-bg-hover:                rgba(#000, $table-hover-factor) !default;
+$table-bg-hover:                #FFF8E1;//rgba(#000, $table-hover-factor) !default;
 $table-bg-active:               $table-bg-hover !default;
 
 $table-border-color:            darken($body-bg, 13.5%) !default;
@@ -175,7 +177,7 @@ $table-border-color:            darken($body-bg, 13.5%) !default;
 $overdue-bg:                    #FFF8E1 !default;
 $overdue-text:                  #676 !default;
 $overdue-link:                  #E65100 !default;
-
+$overdue-marker-color:          $brand-warning !default;
 
 //== Trackers priorities
 //
@@ -187,18 +189,20 @@ $priority-lowest-link:          #096 !default;
 $priority-default-bg:           #fff !default;
 $priority-default-text:         $text-color !default;
 $priority-default-link:         #01579B !default;
+$priority-default-marker-color: transparent !default;
 
 $priority-high3-bg:             #d5eaff !default;
 $priority-high3-text:           #556 !default;
 $priority-high3-link:           #05a !default;
 
-$priority-high2-bg:             #ffe1d7 !default;
+$priority-high2-bg:             $brand-danger !default;
 $priority-high2-text:           #855 !default;
 $priority-high2-link:           #b04 !default;
 
-$priority-highest-bg:           #ffa5a5 !default;
+$priority-highest-bg:           $brand-danger !default;
 $priority-highest-text:         #944 !default;
 $priority-highest-link:         #a03 !default;
+
 
 
 //== Trackers links

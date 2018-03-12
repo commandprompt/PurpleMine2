@@ -144,6 +144,20 @@
 }
 
 
+@mixin colorbar($parent, $color) {
+
+  tr#{$parent} {
+
+    @if ".priority-default" == $parent {
+      box-shadow: inset 5px 0px 0px 0px $priority-default-marker-color;
+    } @else {
+      box-shadow: inset 5px 0px 0px 0px $color;
+    }
+  }
+
+}
+
+
 // Tracker highlight
 
 @mixin tracker($parent, $background, $color) {

@@ -22,7 +22,7 @@ table.list {
     border-width: $table-list-header-border;
     color: $gray;
     vertical-align: bottom;
-    // text-align: left;
+    text-align: left;
 
     a {
       color: $gray-dark;
@@ -90,7 +90,9 @@ table.list {
     &.status,
     &.string,
     &.subject,
-    &.text,
+    &.updated_on,
+    &.project,
+    &.tracker,
     &.user {
       text-align: left;
     }
@@ -324,6 +326,21 @@ tr.entry {
   @include priority(".priority-high2",   $priority-high2-bg,   $priority-high2-text,   $priority-high2-link);
   @include priority(".priority-highest", $priority-highest-bg, $priority-highest-text, $priority-highest-link);
 }
+
+@if $issue-priority-markers {
+  // scss-lint:disable SpaceAfterComma
+  @include colorbar(".priority-lowest",  $priority-lowest-bg);
+  @include colorbar(".priority-default", $priority-default-marker-color);
+  @include colorbar(".priority-high3",   $priority-high3-bg);
+  @include colorbar(".priority-high2",   $priority-high2-bg);
+  @include colorbar(".priority-highest", $priority-highest-bg);
+}
+
+@if $issue-overdue-markers {
+  // scss-lint:disable SpaceAfterComma
+  @include colorbar(".overdue", $overdue-marker-color);
+}
+
 
 @if $color-overdues {
   // tr.issue.overdue {
