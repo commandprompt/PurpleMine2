@@ -206,7 +206,9 @@ div.wiki {
     border-radius: $border-radius-base;
     border-color: rgba(#000, .068);
     background-color: rgba(#000, .03);
+    background-color: $gray-lightest;
     font-size: $font-size-small;
+    font-family: $font-family-monospace;
 
     code {
       padding: 0;
