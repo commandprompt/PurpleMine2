@@ -90,7 +90,7 @@ $icon-danger-hover-color:            darken($brand-danger, 10%);
 
   .icon-only {
     @extend %fa-icon;
-    font-size: 0;
+    font-size: 1;
     white-space: nowrap;
 
     @at-root a#{&} {

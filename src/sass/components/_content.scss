@@ -87,11 +87,11 @@
     margin: 0 0 ($line-height-computed / 2);
     padding: 0;
 
-    @if $sidebar-position == "left" {
-      margin-right: -($sidebar-padding-horizontal);
-    } @else {
-      margin-left: -($sidebar-padding-horizontal);
-    }
+    // @if $sidebar-position == "left" {
+    //   margin-right: -($sidebar-padding-horizontal);
+    // } @else {
+    //   margin-left: -($sidebar-padding-horizontal);
+    // }
   }
 
   li {

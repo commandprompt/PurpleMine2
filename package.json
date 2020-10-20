@@ -26,7 +26,8 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^1.0.0"
+    "grunt-sass": "^1.0.0",
+    "node-sass": "^4.14.1"
   },
   "devDependencies": {
     "standard": "^8.5.0"
