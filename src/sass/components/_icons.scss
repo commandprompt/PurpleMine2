@@ -239,7 +239,8 @@ a.icon-only {
 a.icon-add,
 a.icon-save,
 a.icon-checked {
-  @include link-variant(success);
+  // @include link-variant(success);
+  color: $teal;
 }
 
 a.icon-del {
@@ -779,6 +780,7 @@ div.wiki {
   img {
     display: none;
   }
+  color: $teal;
 }
 
 #attach_files_link {

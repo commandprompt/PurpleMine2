@@ -113,7 +113,7 @@ p.buttons,
   > a {
     border-color: $pagination-border;
     background-color: $pagination-bg;
-    color: $pagination-color;
+    // color: $pagination-color;
 
     &:first-child {
       margin-left: 0;
@@ -127,7 +127,7 @@ p.buttons,
     &:focus {
       border-color: $pagination-hover-border;
       background-color: $pagination-hover-bg;
-      color: $pagination-hover-color;
+      // color: $pagination-hover-color;
       text-decoration: none;
     }
   }

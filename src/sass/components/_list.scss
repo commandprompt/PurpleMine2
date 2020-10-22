@@ -230,6 +230,10 @@ tr.issue {
     background-repeat: no-repeat;
   }
 
+  &.overdue {
+    box-shadow: inset 5px 0px 0px 0px #ed820c
+  }
+
   &.overdue td.due_date {
     color: $brand-danger;
   }

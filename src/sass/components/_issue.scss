@@ -110,7 +110,7 @@
           margin: 0 (-$issue-padding) (-$issue-padding);
           padding: $padding-wiki;
           border-top: 1px solid $issue-border;
-          background: $body-bg;
+          background: #FFFDE7;
         }
       }
     }
@@ -259,7 +259,7 @@
     .label {
       box-sizing: border-box;
       float: left;
-      color: $gray-700;
+      color: $gray-800;
     }
 
     .value {
