@@ -231,7 +231,7 @@ tr.issue {
   }
 
   &.overdue {
-    box-shadow: inset 5px 0px 0px 0px #ed820c
+    box-shadow: inset 5px 0 0 0 #ed820c;
   }
 
   &.overdue td.due_date {

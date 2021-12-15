@@ -43,8 +43,10 @@ div.wiki {
   h6, .h6 {
     margin-top: 1em;
     margin-bottom: $wiki-font-size;
-    font-weight: $headings-font-weight;
+    /* stylelint-disable */
     color: $wiki-text !important;
+    /* stylelint-enable */
+    font-weight: $headings-font-weight;
     line-height: $headings-line-height;
   }
 
