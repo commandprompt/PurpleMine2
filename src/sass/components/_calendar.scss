@@ -88,6 +88,10 @@ p.cal.legend .ending {
   }
 }
 
+table.cal .ending {
+  font-weight: bold;
+}
+
 table.cal .starting.ending a,
 p.cal.legend .starting.ending {
   &::before {

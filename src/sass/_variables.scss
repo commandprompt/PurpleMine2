@@ -142,7 +142,7 @@ $font-size-large-px:            18px !default;
 $font-size-small-unitless:      .86 !default;
 $font-size-small:               $font-size-small-unitless * 1em !default;
 $font-size-small-px:            floor($font-size-small-unitless * $font-size-base) !default;
-
+$font-size-gantt:               1em !default;
 $font-size-h1:                  2.25em !default;
 $font-size-h2:                  1.75em !default;
 $font-size-h3:                  1.5em !default;

@@ -58,10 +58,13 @@ table.list {
     &.id,
     &.issue_id,
     &.legacy_id,
-    &.parent,
     &.relations,
     &.tracker {
       width: 2%;
+    }
+
+    &.parent {
+      width: 5%;
     }
 
     &.id,

@@ -10,6 +10,7 @@ div.gantt_content {
 table.gantt-table {
   width: 100%;
   border-collapse: collapse;
+  font-size: $font-size-gantt;
 
   td {
     padding: 0;
@@ -23,6 +24,7 @@ table.gantt-table {
   height: 16px;
   overflow: hidden;
   border: 1px solid $gray-500;
+  font-size: .9em !important; // stylelint-disable-line declaration-no-important
   text-align: center;
 
   &[style*="background"] {
@@ -68,6 +70,10 @@ table.gantt-table {
     img.icon-gravatar {
       float: none;
     }
+
+    span.icon.icon-issue::before {
+      font-size: 18px;
+    }
   }
 }
 
@@ -77,7 +83,7 @@ table.gantt-table {
   top: 50%;
   width: 100%;
   transform: translateY(-50%);
-  font-size: $font-size-small;
+  // font-size: $font-size-gantt;
 }
 
 td.gantt_selected_column {
@@ -93,7 +99,7 @@ td.gantt_selected_column .gantt_hdr,
 .gantt_subjects {
   position: relative;
   z-index: 1;
-  font-size: $font-size-small;
+  font-size: $font-size-gantt;
 }
 
 .gantt_selected_column_content {
@@ -109,18 +115,18 @@ td.gantt_selected_column .gantt_hdr,
   div {
     @include text-overflow;
     width: 100%;
-    height: 16px;
-    line-height: 16px;
+    height: 20px;
+    line-height: 18px;
   }
 }
 
 .task {
   position: absolute;
   height: 8px;
-  margin: 2px 0 0;
+  margin: 6px 0 0;
   padding: 0;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: .8em;
+  line-height: 18px;
   white-space: nowrap;
 
   &.label {
@@ -129,6 +135,7 @@ td.gantt_selected_column .gantt_hdr,
 
     &.project,
     &.version {
+      font-size: .8em;
       font-weight: $font-weight-bold;
     }
   }
