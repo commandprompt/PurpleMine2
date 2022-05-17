@@ -241,23 +241,27 @@ tr.issue {
     color: $brand-danger;
   }
 
-  &.parent {
-    background-color: shade($blue, 200);
-  }
-
-  &.child {
-    background-color: shade($blue, 50);
-  }
-
-  &.parent.child {
-    background-color: shade($blue, 100);
-  }
-
 
   @for $i from 1 through 9 {
     &.idnt-#{$i} td.subject {
       padding-left: $table-cell-padding + 16px * $i;
       background-position: ($table-cell-padding + 16px * ($i - 1) - 3px) 50%;
+    }
+  }
+}
+
+table.list.issues.colorize {
+  tr.issue {
+    &.parent {
+      background-color: shade($blue, 200);
+    }
+
+    &.child {
+      background-color: shade($blue, 50);
+    }
+
+    &.parent.child {
+      background-color: shade($blue, 100);
     }
   }
 }
