@@ -65,3 +65,17 @@
     }
   }
 }
+
+@mixin colorized-issue($color) {
+  &.parent {
+    background-color: shade($color, 200);
+  }
+
+  &.child {
+    background-color: shade($color, 50);
+  }
+
+  &.parent.child {
+    background-color: shade($color, 100);
+  }
+}

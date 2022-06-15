@@ -251,18 +251,24 @@ tr.issue {
 }
 
 table.list.issues.colorize {
+  tr:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, .3);
+  }
+
   tr.issue {
-    &.parent {
-      background-color: shade($blue, 200);
-    }
+    @include colorized-issue($blue);
+  }
 
-    &.child {
-      background-color: shade($blue, 50);
-    }
+  tr.issue.colorize-orange {
+    @include colorized-issue($orange);
+  }
 
-    &.parent.child {
-      background-color: shade($blue, 100);
-    }
+  tr.issue.colorize-yellow {
+    @include colorized-issue($yellow);
+  }
+
+  tr.issue.colorize-red {
+    @include colorized-issue($red);
   }
 }
 
