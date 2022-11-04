@@ -59,10 +59,18 @@ table.cal {
 
     div.issue {
       padding-left: 6px;
-    }
 
-    div.issue.overdue {
-      box-shadow: inset 3px 0 0 0 #ed820c;
+      @include priority-icon-base;
+
+      @each $priority-id, $priority-icon in $priority-icons-map {
+        &.priority-#{$priority-id}::before {
+          background-image: inline-svg(map-get($priority-icon, icon), (path: (fill: map-get($priority-icon, color))));
+        }
+      }
+
+      &.overdue {
+        box-shadow: inset 3px 0 0 0 #ed820c;
+      }
     }
   }
 }
