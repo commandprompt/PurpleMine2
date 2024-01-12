@@ -94,7 +94,9 @@ $icon-map: (
   icon-shared:                  $fa-var-link,
   icon-actions:                 $fa-var-ellipsis-h,
   icon-sort-handle:             $fa-var-arrows-v,
+  /* typo "expended" has to be kept for backwards compatibility */
   icon-expended:                $fa-var-chevron-down,
+  icon-expanded:                $fa-var-chevron-down,
   icon-collapsed:               $fa-var-chevron-right,
   icon-bookmark:                $fa-var-bookmark,
   icon-bookmark-off:            $fa-var-bookmark-o,
@@ -104,6 +106,8 @@ $icon-map: (
   icon-toggle-minus:            $fa-var-minus-square,
   icon-clear-query:             $fa-var-times,
   icon-import:                  $fa-var-cloud-upload,
+  icon-bookmarked-project:      $fa-var-tag,
+  icon-copy-link:               $fa-var-clipboard,
 
   // Plugin icons
   icon-call:                    $fa-var-phone,
@@ -179,6 +183,10 @@ a.icon:empty {
   display: inline-block;
 }
 
+span.icon + span.icon {
+  margin-left: $padding-small-vertical;
+}
+
 $icons-selector: ();
 @each $class, $icon in $icon-map {
   $icons-selector: append($icons-selector, unquote(".#{$class}"), "comma");
@@ -191,6 +199,8 @@ $icons-selector: ();
         color: $orange;
       } @else if $class == "icon-heart" {
         color: $pink;
+      } @else if $class == "icon-bookmarked-project" {
+        color: $blue;
       }
     }
 
@@ -587,13 +597,48 @@ dt {
   }
 }
 
-.my-project {
+a.project {
+  $svg-star: inline-svg("icon-star.svg", (path: (fill: $orange)));
+  $svg-tag: inline-svg("icon-tag.svg", (path: (fill: $blue)));
+
+  &.icon {
+    padding-left: 0;
+
+    &::before {
+      content: "";
+      display: none;
+      margin: 0;
+    }
+  }
+
+  &.my-project,
+  &.icon-user,
+  &.icon-bookmarked-project {
+    padding-right: $icon-width;
+    background-image: $svg-star;
+    background-repeat: no-repeat;
+    background-position: bottom .2em right 0, bottom .2em right $icon-width;
+  }
+
+  &.icon-bookmarked-project {
+    background-image: $svg-tag;
+  }
+
+  &.icon-user.icon-bookmarked-project {
+    padding-right: $icon-width * 2;
+    background-image: $svg-tag, $svg-star;
+  }
+}
+
+span.my-project {
   @extend %fa-icon;
 
   &::before {
     content: $fa-var-star;
-    color: $yellow;
-    font-size: $font-size-small;
+    width: $icon-width;
+    margin-right: 0;
+    color: $orange;
+    text-align: center;
   }
 }
 
@@ -896,6 +941,12 @@ div.wiki {
 .journal .wiki .contextual {
   > a {
     @extend %fa-icon;
+
+    &::before {
+      width: $icon-width;
+      margin-right: 0;
+      text-align: center;
+    }
 
     &:not([class*="icon"]) {
       &::before {

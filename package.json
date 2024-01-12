@@ -1,6 +1,6 @@
 {
   "name": "purplemine",
-  "description": "A free Redmine 2.6+ theme written in SCSS",
+  "description": "A free Redmine 3.0+ theme written in SCSS",
   "keywords": [
     "redmine",
     "theme",
@@ -25,27 +25,27 @@
     "lint": "npm run -S lint:js && npm run -S lint:sass"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "grunt": "^1.2.1",
-    "grunt-contrib-uglify": "^5.0.0",
+    "@liquid-js/sass-inline-svg": "^2.0.0",
+    "autoprefixer": "^9.8.8",
+    "grunt": "^1.6.1",
+    "grunt-contrib-uglify": "^5.2.2",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.1.0",
-    "node-sass": "^4.14.1",
-    "sass-inline-svg": "^1.2.3"
+    "sass": "^1.69.5"
   },
   "devDependencies": {
-    "eslint": "^7.6.0",
+    "eslint": "^7.32.0",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "stylelint": "^13.6.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "stylelint": "^13.13.1",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint-scss": "^3.21.0"
   },
   "browserslist": [
     "last 2 versions",
